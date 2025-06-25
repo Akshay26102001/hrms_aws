@@ -1,0 +1,10 @@
+{% extends 'hr/base.html' %}
+{% block content %}
+<div class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow">
+  <h2 class="text-xl font-bold mb-4">Profile</h2>
+  <p><strong>Username:</strong> {{ employee.user.username }}</p>
+  <p><strong>Department:</strong> {{ employee.department }}</p>
+  <p><strong>DOB:</strong> {{ employee.dob }}</p>
+  <p><strong>Phone:</strong> {{ employee.phone }}</p>
+</div>
+{% endblock %}

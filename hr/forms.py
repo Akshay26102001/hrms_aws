@@ -1,7 +1,7 @@
 from django import forms
-from .models import Employee
+from .models import Leave
 
-class EmployeeForm(forms.ModelForm):
+class LeaveForm(forms.ModelForm):
     class Meta:
-        model = Employee
-        fields = '__all__'
+        model = Leave
+        fields = ['start_date', 'end_date', 'reason', 'leave_type']
