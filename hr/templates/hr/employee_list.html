@@ -1,0 +1,9 @@
+<h1>Employee List</h1>
+<p><a href="{% url 'add_employee' %}">Add Employee</a> | <a href="{% url 'logout' %}">Logout</a></p>
+<ul>
+  {% for emp in employees %}
+    <li>{{ emp.name }} - {{ emp.department }} - {{ emp.designation }}</li>
+  {% empty %}
+    <li>No employees found.</li>
+  {% endfor %}
+</ul>
