@@ -1,0 +1,27 @@
+<!-- templates/hr/dashboard.html -->
+{% extends 'hr/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-4">Welcome, {{ user.username }}</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-lg font-semibold">Employees</h2>
+      <p class="text-3xl font-bold">{{ total_employees }}</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-lg font-semibold">Leaves Today</h2>
+      <p class="text-3xl font-bold">{{ leaves_today }}</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-lg font-semibold">Pending Requests</h2>
+      <p class="text-3xl font-bold">{{ pending_requests }}</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-lg font-semibold">Monthly Payroll</h2>
+      <p class="text-2xl font-bold text-green-600">₹ {{ total_salary }}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
